@@ -22,40 +22,43 @@
  <input type="Submit" id="btndivide" value="/">
   <script src="calculator.js"></script>
   
-  
-  
-  
-  
   <br>
   <input type="Submit" id="calculatebtn" value="Calculate">
   <script src="calculator.js"></script>
  
   <script type="text/javascript">
-  var int1;
-  var int2; 
+  var val1;
+  var val2;
+  var btntype; //btntype implies entered button
     document.getElementById('calculatebtn').onclick = function(e){
 	  
-       var input = document.getElementById('input_area').value;
-       document.getElementById('result').innerHTML = eval(input);
+       val2 = document.getElementById('input_area').value;
+       document.getElementById('result').innerHTML = plus();
        
     }
-  </script>
-</body>
-
-<body>
-  <h1>My Calculator</h1>
-  <input type="text" id="input_area" />
-  <label id="result">--</label>
-  <br>
-  <input type="submit" id="calculatebtn" value="Calculate">
-  <script src="calculator.js"></script>
-
-  <script type="text/javascript">
-    document.getElementById('calculatebtn').onclick = function (e) {
-      var input = document.getElementById('input_area').value;
-      document.getElementById('result').innerHTML = eval(input);
+    
+    document.getElementById('btnadd').onclick = function(e){
+	  
+       val1 = document.getElementById('input_area').value;
+       btntype=1;
+       
     }
+    document.getElementById('btnsub').onclick = function(e){
+	  
+       val1 = document.getElementById('input_area').value;
+       btntype=2;
+    }
+    document.getElementById('btnmultiply').onclick = function(e){
+	  
+       val1 = document.getElementById('input_area').value;
+       btntype=3;
+    }
+    document.getElementById('btndivide').onclick = function(e){
+	  
+       val1 = document.getElementById('input_area').value;
+       btntype=4;
+    }
+    
   </script>
 </body>
-  
 </html>
