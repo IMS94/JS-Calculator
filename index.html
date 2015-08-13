@@ -7,53 +7,70 @@
 </head>
 
 <body>
-  <h1>My Calculator</h1>
-  <input type="text" id="input_area" />
-  <br>
-  <label id="result"></label>
+  <div class="container-fluid">
+    <h1>My Calculator</h1>
+    <input type="text" id="input_area" class="form-control"/>
+    <br>
+    <label id="result"></label>
+    <br>
+    <br>
+    <!--butons-->
+    <input type="Submit" id="btn1" value="1">
+    <input type="Submit" id="btn2" value="2">
+    <input type="Submit" id="btn3" value="3">
+    <input type="Submit" id="btndivide" value="/">
+    <br>
+    <input type="Submit" id="btn4" value="4">
+    <input type="Submit" id="btn5" value="5">
+    <input type="Submit" id="btn6" value="6">
+    <input type="Submit" id="btnmultiply" value="*">
+    <br>
+    
+    <input type="Submit" id="btn7" value="7">
+    <input type="Submit" id="btn8" value="8">
+    <input type="Submit" id="btn8" value="9">
+    <input type="Submit" id="btnsub" value="-">
+    <br>
+    <input type="Submit" id="btn0" value="0">
+    <input type="Submit" id="btnadd" value="+">
+    
+    <br>
+    <input type="Submit" id="calculatebtn" value="Calculate">
+  </div>
 
-  <!--butons-->
-  <input type="Submit" id="btnadd" value="+">
-  <script src="calculator.js"></script>
-  <input type="Submit" id="btnsub" value="-">
-  <script src="calculator.js"></script>
-  <input type="Submit" id="btnmultiply" value="*">
-  <script src="calculator.js"></script>
-  <input type="Submit" id="btndivide" value="/">
-  <script src="calculator.js"></script>
-
-  <br>
-  <input type="Submit" id="calculatebtn" value="Calculate">
   <script src="calculator.js"></script>
 
   <script type="text/javascript">
-  var str;
-  var btntype; //btntype implies entered button
+    var str='';
     document.getElementById('calculatebtn').onclick = function(e){
-       val2 = document.getElementById('input_area').value;
-       
+       str +=document.getElementById('input_area').value;
+       document.getElementById('result').innerHTML=eval(str);
+       str='';
     }
     
     document.getElementById('btnadd').onclick = function(e){
-	  
-       val1 = document.getElementById('input_area').value;
-       btntype=1;
+	     str=document.getElementById('input_area').value;
+       val1+='+';
+       document.getElementById('result').innerHTML=eval(str);
        
     }
     document.getElementById('btnsub').onclick = function(e){
-	  
-       val1 = document.getElementById('input_area').value;
-       btntype=2;
+	     str=document.getElementById('input_area').value;
+       val1+='-';
+       document.getElementById('result').innerHTML=eval(str);
+       
     }
     document.getElementById('btnmultiply').onclick = function(e){
-	  
-       val1 = document.getElementById('input_area').value;
-       btntype=3;
-    }
+	      str=document.getElementById('input_area').value;
+        val1+='*';
+        document.getElementById('result').innerHTML=eval(str);
+       
+      }
     document.getElementById('btndivide').onclick = function(e){
-	  
-       val1 = document.getElementById('input_area').value;
-       btntype=4;
+	      str=document.getElementById('input_area').value;
+        val1+='/';
+        document.getElementById('result').innerHTML=eval(str);
+       
     }
   </script>
 </body>
