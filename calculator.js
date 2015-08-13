@@ -14,3 +14,18 @@ function divide(a, b) {
         return a - b;
     }
 }
+function sqrt(a) {
+    return Math.sqrt(a);
+}
+
+function pow(a, b) {
+    return Math.pow(a,b);
+}
+
+function pow(a, b) {
+    return Math.pow(a,b);
+}
+
+function pow(a) {
+    return Math.evaluate(a);
+}
